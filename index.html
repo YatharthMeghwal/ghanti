@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+
+    
+    <meta charset="utf-8">
+    <title>School ghanti app</title>
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+     <h1>School Ghanti App</h1>
+    
+    <br><br><br><br>
+
+    
+  
+    
+    <div class="wrapper">
+      <h3>Starting Assembly</h3>
+     <div hidden id="ct1">  </div>
+    <div class="content">
+        <div class="column">
+          <select>
+            <option value="Hour" selected disabled hidden>Hour</option>
+          </select>
+        </div>
+        <div class="column">
+          <select>
+            <option value="Minute" selected disabled hidden>Minute</option>
+          </select>
+        </div>
+        <div class="column">
+          <select>
+            <option value="AM/PM" selected disabled hidden>AM/PM</option>
+          </select>
+        </div>
+      </div>
+  
+      <button>Set Alarm</button>
+    </div>
+    
+
+
+
+    <div class="wrapper">
+      <h3>Period 1</h3>
+      <div hidden id="ct2">  </div>
+   <div class="content" id="content2">
+        <div class="column" id="column2">
+          <select class="select2">
+            <option value="Hour" selected disabled hidden>Hour</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select2">
+            <option value="Minute" selected disabled hidden>Minute</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select2">
+            <option value="AM/PM" selected disabled hidden>AM/PM</option>
+          </select>
+        </div>
+      </div>
+      <button id="button2">Set Alarm</button>
+    </div>
+
+
+    <div class="wrapper">
+      <h3>Period 2</h3>
+      <div hidden id="ct3">  </div>
+      <div class="content" id="content3">
+        <div class="column" id="column3">
+          <select class="select3">
+            <option value="Hour" selected disabled hidden>Hour</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select3">
+            <option value="Minute" selected disabled hidden>Minute</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select3">
+            <option value="AM/PM" selected disabled hidden>AM/PM</option>
+          </select>
+        </div>
+      </div>
+      <button  id="button3">Set Alarm</button>
+    </div>
+
+    <div class="wrapper">
+      <h3>Period 3</h3>
+      <div hidden id="ct4"></div>
+      <div class="content" id="content4">
+        <div class="column" id="column4">
+          <select class="select4">
+            <option value="Hour" selected disabled hidden>Hour</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select4">
+            <option value="Minute" selected disabled hidden>Minute</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select4">
+            <option value="AM/PM" selected disabled hidden>AM/PM</option>
+          </select>
+        </div>
+      </div>
+      <button  id="button4">Set Alarm</button>
+    </div>
+
+    <div class="wrapper">
+      <h3>Period 4</h3>
+      <div hidden id="ct5">  </div>
+      <div class="content" id="content5">
+        <div class="column" id="column5">
+          <select class="select5">
+            <option value="Hour" selected disabled hidden>Hour</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select5">
+            <option value="Minute" selected disabled hidden>Minute</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select5">
+            <option value="AM/PM" selected disabled hidden>AM/PM</option>
+          </select>
+        </div>
+      </div>
+      <button  id="button5">Set Alarm</button>
+    </div>
+
+
+    <div class="wrapper">
+      <h3>Lunch Time</h3>
+      <div hidden id="ct6">  </div>
+  <div class="content" id="content6">
+        <div class="column" id="column6">
+          <select class="select6">
+            <option value="Hour" selected disabled hidden>Hour</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select6">
+            <option value="Minute" selected disabled hidden>Minute</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select6">
+            <option value="AM/PM" selected disabled hidden>AM/PM</option>
+          </select>
+        </div>
+      </div>
+      <button  id="button6">Set Alarm</button>
+    </div>
+
+    <div class="wrapper">
+      <h3>Period 5</h3>
+      <div hidden id="ct7">  </div>
+      <div class="content" id="content7">
+        <div class="column" id="column7">
+          <select class="select7">
+            <option value="Hour" selected disabled hidden>Hour</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select7">
+            <option value="Minute" selected disabled hidden>Minute</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select7">
+            <option value="AM/PM" selected disabled hidden>AM/PM</option>
+          </select>
+        </div>
+      </div>
+      <button  id="button7">Set Alarm</button>
+    </div>
+  
+    <div class="wrapper">
+      <h3>Period 6</h3>
+      <div hidden id="ct8">  </div>
+      <div class="content" id="content8">
+        <div class="column" id="column8">
+          <select class="select8">
+            <option value="Hour" selected disabled hidden>Hour</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select8">
+            <option value="Minute" selected disabled hidden>Minute</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select8">
+            <option value="AM/PM" selected disabled hidden>AM/PM</option>
+          </select>
+        </div>
+      </div>
+      <button  id="button8">Set Alarm</button>
+    </div>
+
+    <div class="wrapper">
+      <h3>Period 7</h3>
+      <div hidden id="ct9">  </div>
+      <div class="content" id="content9">
+        <div class="column" id="column9">
+          <select class="select9">
+            <option value="Hour" selected disabled hidden>Hour</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select9">
+            <option value="Minute" selected disabled hidden>Minute</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select9">
+            <option value="AM/PM" selected disabled hidden>AM/PM</option>
+          </select>
+        </div>
+      </div>
+      <button  id="button9">Set Alarm</button>
+    </div>
+
+    <div class="wrapper">
+      <h3>period 8</h3>
+      <div hidden id="ct10">  </div>
+      <div class="content" id="content10">
+        <div class="column" id="column10">
+          <select class="select10">
+            <option value="Hour" selected disabled hidden>Hour</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select10">
+            <option value="Minute" selected disabled hidden>Minute</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select10">
+            <option value="AM/PM" selected disabled hidden>AM/PM</option>
+          </select>
+        </div>
+      </div>
+      <button  id="button10">Set Alarm</button>
+    </div>
+
+    <div class="wrapper">
+      <h3>Tan tan tan</h3>
+      <div hidden id="ct11">  </div>
+      <div class="content" id="content11">
+        <div class="column" id="column11">
+          <select class="select11">
+            <option value="Hour" selected disabled hidden>Hour</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select11">
+            <option value="Minute" selected disabled hidden>Minute</option>
+          </select>
+        </div>
+        <div class="column">
+          <select class="select11">
+            <option value="AM/PM" selected disabled hidden>AM/PM</option>
+          </select>
+        </div>
+      </div>
+      <button  id="button11">Set Alarm</button>
+    </div>
+
+    
+
+    
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
